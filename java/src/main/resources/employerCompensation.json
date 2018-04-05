@@ -1,0 +1,4 @@
+{
+	"query":"query {\n  company {\n    companyInfo {\n      employerInfo {\n        compensations {\n          edges {\n            node {\n              id\n              name\n              statutoryCompensationPolicy\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+	"variables":null
+}
