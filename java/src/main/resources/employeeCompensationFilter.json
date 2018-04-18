@@ -1,0 +1,4 @@
+{
+	"query":"query {\n  company {\n    employeeContacts {\n      edges {\n        node {\n          id\n          person {\n            givenName\n          }\n          profiles {\n            employee {\n              compensations(filterBy: \"endDate = null\") {\n                edges {\n                  node {\n                    id\n                    amount\n                    endDate\n                    employerCompensation {\n                      name\n                      id\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+	"variables":null
+}
