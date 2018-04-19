@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class EmployerCompensation {
 	
-	public static final String url = "https://v4thirdparty-e2e.api.intuit.com/graphql";
+	public static final String url = "https://v4thirdparty.api.intuit.com/graphql";
 	public static final String accessToken = "add oauth2 access token";
 	private static final CloseableHttpClient CLIENT = HttpClientBuilder.create().build();
 	

@@ -21,11 +21,11 @@ import org.slf4j.LoggerFactory;
  */
 public class EmployeeCompensationWithFilter {
 	
-	public static final String url = "https://v4thirdparty-e2e.api.intuit.com/graphql";
-	public static final String accessToken = "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..WqG3YPq60s6HI80_2SibOA.P_hWUB8qMaoXVglx3Q4g4Sln3B_6B_fGli30CzrRgfhUZlNcapF7LxyQqrP38Fosi-l-7pFCLrRCUiOiDzcpSbwrMX496LGn5KSnC4RfuutFgsAR2IWaq6HTUYwKbx6cHiFmbtEnNhDx2cwUC64hrllxu7RizgYv005sTb64Qr0k-fbU9F_YN-k3xUU8O-WX6FBx4ZHLrjCvjRSAiQuR5PE0B7Lbvwy6rL1KIpOVZp4qshsY6iZpt_vCwH9L_rZG4itktZfPf9yKRzp4veyIEjw83_56H5RxURJIrEdZP8CBNL5JrNijFfW5OmUanuFvABcl6zfYt-xA3vYwLUyj60J6AnT2df-tzszcJZCkpf0Tj6ZaTQu9mfrzFGTiTwdOpO8aJmZ33rVNGthm2S3xQHldTBc2N76mcrwOCifOKsVOHWIhGLA6GPS7DEL3bFiI47bzBVpRZ5t-E-i_JEGsWP_95DXmZuXlkbuDTz3xnsG24ZaJ9zxrRIEodKAa_RjvYvAF01KRvARob3MTcoQFVqwpA0MBHsC6u-SkenfB959nicENckOVkbbzLKKjpVLFdC-j4gqu9pM4OO0Gr7tYNoWL4EedBNBJHJApyOOZ-p39lwkg8LAxiF_bTxWdG3dtaIh7aY9Ie_IIhfIzXnWQ2d2MZESVafihNmaOhuz0yXWycpF3SaDiREy6TjP0Yud2.oVViUF7wPo8aoYp45Hop9g";
+	public static final String url = "https://v4thirdparty.api.intuit.com/graphql";
+	public static final String accessToken = "add oauth2 access token";
 	private static final CloseableHttpClient CLIENT = HttpClientBuilder.create().build();
 	
-	private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(EmployerCompensation.class);
+	private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(EmployeeCompensationWithFilter.class);
 	
 	public static void main (String[] args) {
 		
