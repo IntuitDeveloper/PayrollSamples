@@ -16,7 +16,7 @@ namespace NetCoreV4Samples
         {
             HttpClient client = new HttpClient();
             const string accessToken = "add oauth2 access token";
-            const string graphQlBaseUrl = "https://v4thirdparty-e2e.api.intuit.com/graphql";
+            const string graphQlBaseUrl = "https://v4thirdparty.api.intuit.com/graphql";
             client.DefaultRequestHeaders.Add("provider_override_scheme", "payroll");
             client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
 
