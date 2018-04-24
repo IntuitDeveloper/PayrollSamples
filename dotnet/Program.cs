@@ -36,7 +36,7 @@ namespace NetCoreV4Samples
                 if (response.StatusCode != System.Net.HttpStatusCode.OK) { throw new Exception("Non-200 status code returned from API call"); }
                 var responseContent = await response.Content.ReadAsStringAsync();
                 JsonValue jsonResponse = JsonValue.Parse(responseContent);
-                if (jsonResponse["data"] == null || jsonResponse["errors"] != null) { throw new Exception("Error returned in JSON response"); }
+                if (!jsonResponse.ContainsKey("data") || jsonResponse.ContainsKey("errors")) { throw new Exception("Error returned in JSON response"); }
                 foreach (JsonObject employeeEdge in jsonResponse["data"]["company"]["employeeContacts"]["edges"])
                 {
                     JsonValue employeeNode = employeeEdge["node"];
@@ -72,7 +72,7 @@ namespace NetCoreV4Samples
                 if (response.StatusCode != System.Net.HttpStatusCode.OK) { throw new Exception("Non-200 status code returned from API call"); }
                 var responseContent = await response.Content.ReadAsStringAsync();
                 JsonValue jsonResponse = JsonValue.Parse(responseContent);
-                if (jsonResponse["data"] == null || jsonResponse["errors"] != null) { throw new Exception("Error returned in JSON response"); }
+                if (!jsonResponse.ContainsKey("data") ||  jsonResponse.ContainsKey("errors")) { throw new Exception("Error returned in JSON response"); }
                 foreach (JsonObject employeerCompensationEdge in jsonResponse["data"]["company"]["companyInfo"]["employerInfo"]["compensations"]["edges"])
                 {
                     JsonValue employeerCompensationNode = employeerCompensationEdge["node"];
