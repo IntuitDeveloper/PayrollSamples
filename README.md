@@ -14,6 +14,7 @@ The [Intuit Developer team](https://developer.intuit.com) has written this Sampl
 ## Samples
 
 Samples are available in the following languages, use the readme within the individual language folder for additional instructions on how to run the sample
+* [DotNet](dotnet)
 * [Java](java)
 * [Ruby](ruby)
 * [Postman](postman)
