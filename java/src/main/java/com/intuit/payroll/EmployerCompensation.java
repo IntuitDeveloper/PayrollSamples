@@ -27,7 +27,7 @@ public class EmployerCompensation {
 	
 	private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(EmployerCompensation.class);
 	
-	public static void main (String[] args) {
+	public static void main (String[] args) throws Exception {
 		
 		//Read graphql request from file
 		String fileString = readFileToString("employerCompensation.json");
@@ -38,19 +38,25 @@ public class EmployerCompensation {
 		
 		//Parse the json and retrive id 
 		JSONObject jsonObj = new JSONObject(result);
-		//TODO Add null check and error handling
-		JSONArray jsonArray = jsonObj.getJSONObject("data")
-							  .getJSONObject("company")
-							  .getJSONObject("companyInfo")
-							  .getJSONObject("employerInfo")
-							  .getJSONObject("compensations")
-							  .getJSONArray("edges");
 		
-		JSONObject jObj = jsonArray.getJSONObject(0);
-		String name = jObj.getJSONObject("node").getString("name");
-		String id = jObj.getJSONObject("node").getString("id");
-		LOG.info("employer compensation name:" + name);
-		LOG.info("employer compensation id :" + id);		
+		// check if error is returned
+		if(jsonObj.has("data") && !jsonObj.has("errors") ) {
+			JSONArray jsonArray = jsonObj.getJSONObject("data")
+								  .getJSONObject("company")
+								  .getJSONObject("companyInfo")
+								  .getJSONObject("employerInfo")
+								  .getJSONObject("compensations")
+								  .getJSONArray("edges");
+			
+			//Retrieving data for the first employerCompensation - this can be modified to iterate and access information for all employerCompensations returned back in the json
+			JSONObject jObj = jsonArray.getJSONObject(0);
+			String name = jObj.getJSONObject("node").getString("name");
+			String id = jObj.getJSONObject("node").getString("id");
+			LOG.info("employer compensation name:" + name);
+			LOG.info("employer compensation id :" + id);	
+		} else {
+			throw new Exception("Error returned in JSON response");
+		}	
 		
 	}
 
