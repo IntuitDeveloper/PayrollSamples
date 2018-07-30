@@ -18,7 +18,7 @@ public class EmployeeCompensationWithFilter {
 	public static void main (String[] args) throws Exception {
 		
 		//Read graphql request from file
-		String fileString = FileReader.readFileToString("employeeCompensationFilter.json");
+		String fileString = FileReader.readFileToString("employeeCompensationFilter.graphql");
 		String graphqlRequest = new JSONObject()
                 .put("query",fileString)
                // .put("variables", variables) //TODO add variables if applicable
