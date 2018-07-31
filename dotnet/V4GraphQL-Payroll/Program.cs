@@ -115,7 +115,7 @@ namespace NetCoreV4Samples
 				var compensationPolicy = (string)employeerCompensationNode["statutoryCompensationPolicy"];
 				Console.WriteLine($"Employer has compensation {compensationName} with ID {compensationId} and policy {compensationPolicy}");
 			}
-            Console.Write("");
+			Console.Write("");
 		}
 
 		private static string getIntuitBearerToken()
