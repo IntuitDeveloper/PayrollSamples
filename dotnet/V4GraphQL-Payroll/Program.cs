@@ -93,7 +93,6 @@ namespace NetCoreV4Samples
 			{
 				JsonValue employeeNode = employeeEdge["node"];
 				var employeeId = (string)employeeNode["id"];
-				//var employeeName = (string)employeeNode["person"]["givenName"];
 				foreach (JsonObject compensationEdge in employeeNode["profiles"]["employee"]["compensations"]["edges"])
 				{
 					JsonValue compensationNode = compensationEdge["node"];
