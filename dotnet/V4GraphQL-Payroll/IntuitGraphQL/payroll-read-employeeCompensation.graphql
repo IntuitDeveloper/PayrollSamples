@@ -1,0 +1,26 @@
+﻿query ReadEmployeeCompensation {
+  company {
+    employeeContacts {
+      edges {
+        node {
+          id
+          profiles {
+            employee {
+              compensations {
+                edges {
+                  node {
+                    id
+                    amount
+                    employerCompensation {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

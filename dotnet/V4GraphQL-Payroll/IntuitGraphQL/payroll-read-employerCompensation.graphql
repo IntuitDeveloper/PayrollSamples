@@ -1,0 +1,17 @@
+﻿query ReadEmployerCompensation {
+  company {
+    companyInfo {
+      employerInfo {
+        compensations {
+          edges {
+            node {
+              id
+              name
+              statutoryCompensationPolicy
+            }
+          }
+        }
+      }
+    }
+  }
+}
