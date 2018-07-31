@@ -19,7 +19,7 @@ This app is directed to provide individual sample code for querying various enti
 
 Follow the steps below to run this sample in Visual Studio:
 
-1. Create a new Console Project (Other -> .NET)
-2. Replace Program.cs with the file in this repository
-3. Run the sample app
+1. Open the Visual Studio Solution file (.sln)
+2. Add a temporary, OAuth2 bearer token in `Auth/danger-do-not-use.txt`
+3. Run the app
 4. In the console, the output of the V4 query will print
