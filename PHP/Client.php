@@ -12,7 +12,7 @@ class Client{
 
     public function __construct(Array $array){
         $this->setOAuth2Tokens($array);
-        $this->baseURL = array_key_exists('BaseUrl', $array) ? $array['BaseUrl'] : "https://v4thirdparty-e2e.api.intuit.com/";
+        $this->baseURL = array_key_exists('BaseUrl', $array) ? $array['BaseUrl'] : "https://v4thirdparty.api.intuit.com/";
         $this->curlClient = new CurlClient();
         $this->config = $array;
     }

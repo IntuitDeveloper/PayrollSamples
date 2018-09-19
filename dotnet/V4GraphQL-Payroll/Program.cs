@@ -11,7 +11,7 @@ namespace NetCoreV4Samples
 	class IntuitV4Samples
 	{
 
-		const string intuitGraphQlEndpoint = "https://v4thirdparty-e2e.api.intuit.com/graphql";
+		const string intuitGraphQlEndpoint = "https://v4thirdparty.api.intuit.com/graphql";
 
 		public static async Task MainAsync()
 		{

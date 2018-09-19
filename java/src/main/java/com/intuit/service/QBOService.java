@@ -21,7 +21,7 @@ public final class QBOService {
 	
 	private QBOService() {}
 	
-	private static final String url = "https://v4thirdparty-e2e.api.intuit.com/graphql";
+	private static final String url = "https://v4thirdparty.api.intuit.com/graphql";
 	private static final String accessToken = "add oauth2 access token";
 	private static final CloseableHttpClient CLIENT = HttpClientBuilder.create().build();
 	
